@@ -1,0 +1,28 @@
+Learn Docker
+
+1. Docker ps -> To view running container
+2. Docker ps -a To view running container history
+3. Docker kill <container id> -> To kill Container
+4. Docker run <Name> -> To run the image
+5. Docker run -it <Name/ID> OR docker run -t -i <Name/ID> -> To kill container using ctrl+c
+6. Docker run <Name><version> -> pulls the image and runs it
+7. Docker run -p <port>:<Container_port> -> PORT binding 
+8. Docker images -> Shows all locally installed images
+9. Docker logs <Conatiner name/ ID> -> Show logs realted to the docker image
+10. Docker run -d --name <name of container> <image name> -> Lets you run image under a specified name 
+11. Docker exec -it <ID> /bin/bash -> Opens container terminal
+12.  docker network ls -> Show docker network info
+13. docker network create mongo-network -> Creates a personalized network
+14.{ 
+docker run -d  \
+-p 27017:27017 
+ -e MONGO_INITDB_ROOT_USERNAME=admin 
+-e MONGO_INITDB_ROOT_PASSWORD=password 
+--name mongodb 
+--net mongo-network mongo 
+} -> Run container with customised settings
+
+15. Docker-compose -f <ComposeFile name> up -> Runs docker compose file to run multiple services together with the specified details
+16. Docker-cmpose -f <File name> down > To stop running all the services
+17. Docker build -t <name&version> -> building image from dockerFile.
+18. Docker rmi <ContainerID> -> To delete a images
