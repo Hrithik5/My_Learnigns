@@ -1,7 +1,7 @@
 Learn Docker
 
 1. Docker ps -> To view running container
-2. Docker ps -a To view running container history
+2. Docker ps -a -> To view running container history
 3. Docker kill <container id> -> To kill Container
 4. Docker run <Name> -> To run the image
 5. Docker run -it <Name/ID> OR docker run -t -i <Name/ID> -> To kill container using ctrl+c
