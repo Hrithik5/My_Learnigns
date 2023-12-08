@@ -26,3 +26,12 @@ docker run -d  \
 16. Docker-cmpose -f <File name> down > To stop running all the services
 17. Docker build -t <name&version> -> building image from dockerFile.
 18. Docker rmi <ContainerID> -> To delete a images
+
+19. You need to tag and push the image. When tagging an image, you can use the image identifier (imageId). It is listed when showing the list of all images with docker images. 
+Syntax and an example (using imageId) for creating a tag are:
+
+docker tag <imageId or imageName> <hostname>:<repository-port>/<image>:<tag>
+docker tag af340544ed62 example.com:18444/hello-world:mytag
+Once the tag, which can be equivalent to a version, is created successfully, you can confirm its creation with docker images and issue the push with the syntax:
+
+docker push <hostname>:<repository-port>/<image>:<tag>
